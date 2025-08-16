@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Detail Page</title>
+    <link rel="stylesheet" href="detail_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="header-container">
+        <div class="header-left">
+            <a href="home.html"><img src="logo.png" alt="Sri Lanka Emblem" class="header-emblem"></a>
+            <div class="header-text">
+                <h1>අග්‍රාමාත්‍ය කාර්යාලය</h1>
+                <h2>பிரதமர் அலுவலகம்</h2>
+                <h3>Prime Minister's Office</h3>
+            </div>
+        </div>
+        <div class="header-center">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search">
+            </div>
+        </div>
+        <div class="header-right">
+            <a href="button1.html"><div class="icon-placeholder" style="background-color: rgb(232, 123, 20);"></div></a>
+            <a href="button1.html"><div class="icon-placeholder" style="background-color: rgb(241, 229, 1);"></div></a>
+            <a href="button1.html"><div class="icon-placeholder" style="background-color: rgb(211, 172, 0);"></div></a>
+            <a href="button1.html"><div class="icon-placeholder" style="background-color: rgb(8, 196, 224);"></div></a>
+            <a href="button1.html"><div class="icon-placeholder" style="background-color: rgb(175, 7, 190);"></div></a>
+            <a href="button1.html"><div class="icon-placeholder" style="background-color: rgb(235, 0, 0);"></div></a>
+        </div>
+    </div>
+    <br>
+    
+    <i class="fas fa-home"></i>
+     
+    <div class="detail-content-wrapper">
+        <h2 id="dynamicTitle" class="dynamic-title" style="margin-bottom: 5px;">අමාත්‍යාංශය</h2>
+        <h2 id="dynamicTitle" style="text-align: center;">ආයතනය</h2>
+        
+
+        <div class="accordion-container">
+
+            <div class="accordion-item">
+                <div class="accordion-header"> 
+                    <a href="#detail"><div class="header-title">
+                        කාර්ය මණ්ඩල තොරතුරු
+                    </div></a>
+                    <div class="header-icons">
+                        <i class="fas fa-print"></i>
+                        <i class="fas fa-file-pdf"></i>
+                        <i class="fas fa-download"></i>
+                        <i class="fas fa-caret-down accordion-arrow"></i> </div>
+                </div>
+                <section id="detail">
+                    <div class="accordion-content"> 
+                        <div class="form-section-header">
+                            <div class="form-header-icons">
+                                <i class="fas fa-file-alt"></i>
+                                <i class="fas fa-pencil-alt"></i>
+                                <i class="fas fa-print"></i>
+                            </div>
+                            <button class="add-new-button">තත්වය</button>
+                        </div>
+
+                        <div class="staff-info-form">
+                            <div class="form-field-row">
+                                <label for="rrpcDate">1. RRPC වෙත ලද දිනය</label>
+                                <input type="text" id="rrpcDate" placeholder="">
+                            </div>
+                            <div class="form-field-row">
+                                <label for="applyDate">2. ලිපියේ සඳහන් දිනය</label>
+                                <input type="text" id="applyDate" placeholder="">
+                            </div>
+                            <div class="form-field-row">
+                                <label for="appliedAmount">3. ලිපි අංකය </label>
+                                <input type="text" id="appliedAmount" placeholder="">
+                            </div>
+                            <div class="form-field-row">
+                                <label for="duty">4. කාරණය</label>
+                                <input type="text" id="duty" placeholder="">
+                            </div>
+                            <div class="form-field-row">
+                                <label for="description">5. තනතුරු විස්තර</label>
+                                <i class="fas fa-caret-down accordion-arrow" id="thanathuruVistaraInput"></i>
+                            </div>
+
+                            <div id="thanathuruDetailsFormContainer" class="hidden-form-section">
+                                <div class="form-section-header">
+                                    <h3>තනතුරු විස්තර</h3>
+                                    <div class="form-header-icons">
+                                        <i class="fas fa-print"></i>
+                                        <i class="fas fa-times close-detail-form-btn"></i> 
+                                    </div>
+                                </div>
+
+                                <div class="staff-info-form">
+                                    <div class="form-field-row">
+                                        <label for="thanathuru1">1. ආයතනයේ සමස්ත අනුමත තනතුරු සංඛ්‍යාව</label>
+                                        <input type="text" id="thanathuru1" placeholder="Placeholder">
+                                    </div>
+                                    <div class="form-field-row">
+                                        <label for="thanathuru2">2. ආයතනයේ සමස්ත තත්‍ය තනතුරු සංඛ්‍යාව</label>
+                                        <input type="text" id="thanathuru2" placeholder="Placeholder">
+                                    </div>
+                                    <div class="form-field-row">
+                                        <label for="thanathuru3">3. ආයතනයේ සමස්ත පුරප්පාඩු තනතුරු සංඛ්‍යාව</label>
+                                        <input type="text" id="thanathuru3" placeholder="Placeholder">
+                                    </div>
+                                    <div class="form-field-row">
+                                        <label for="thanathuru4">4. ආයතනයේ පසුගිය වසර 03 තුල අඛණ්ඩව පැවතී පුරප්පාඩු සංඛ්‍යාව</label>
+                                        <input type="text" id="thanathuru4" placeholder="Placeholder">
+                                    </div>
+                                    <div class="form-field-row">
+                                        <label for="thanathuru5">5. ආයතනයේ විශ්‍රාම යාම නිසා ඇති වූ පුරප්පාඩු සංඛ්‍යාව</label>
+                                        <input type="text" id="thanathuru5" placeholder="Placeholder">
+                                    </div>
+
+                                    <div class="table-container">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>තනතුරු නාමය</th>
+                                                    <th>ප්‍රා/ද්</th>
+                                                    <th>Salary Code</th>
+                                                    <th>අනුයුක්ත තනතුරු</th>
+                                                    <th>තත්‍ය තනතූරු</th>
+                                                    <th>පුරප්පාඩු</th>
+                                                    <th>පසුගිය වසර 3 සිට පැවතී පුරප්පාඩු</th>
+                                                    <th>විශ්‍රාම යාම නිසා ඇති පුරප්පාඩු </th>
+                                                    <th>අත්‍යවශ්‍ය තනතුරු</th>
+                                                    <th>විස්තර</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><input type="text"></td>
+                                                    <td><input type="text"></td>
+                                                    <td><input type="text"></td>
+                                                    <td><input type="text"></td>
+                                                    <td><input type="text"></td>
+                                                    <td><input type="text"></td>
+                                                    <td><input type="text"></td>
+                                                    <td><input type="text"></td>
+                                                    <td><input type="text"></td>
+                                                    <td><input type="text"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <div class="form-action-buttons">
+                                        <button type="button" class="action-btn edit-btn">Edit</button>
+                                        <button type="button" class="action-btn save-btn" id="saveThanathuruDetails">Save</button>
+                                        <button type="button" class="action-btn print-btn">Print</button>
+                                        <button type="button" class="action-btn add-btn" id="addThanathuruRow">Add</button>
+                                        <button type="button" class="action-btn edit-btn">Delete</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-field-row">
+                                <label for="authority">6. සම්බන්ධීකාරක නිලධාරියා</label>
+                                <input type="text" id="authority" placeholder="නම">
+                            </div>
+                            <div class="form-field-row">
+                                <label></label>
+                                <input type="text" placeholder="තනතුර">
+                            </div>
+                            <div class="form-field-row">
+                                <label></label>
+                                <input type="text" placeholder="විද්‍යුත් තැපැල් ලිපිනය ">
+                            </div>
+                            <div class="form-field-row">
+                                <label></label>
+                                <input type="text" placeholder="දුරකථන අංකය ">
+                            </div>
+
+                            <div class="form-field-row">
+                                <label></label>
+                                <input type="text" placeholder="වට්ස්ඇප් අංකය ">
+                            </div>
+
+                            <div class="form-field-row file-upload-row">
+                                <label for="scanCopy">7.ස්කෑන් කොපිය </label>
+                                <div class="file-input-display-wrapper">
+                                    <input type="file" id="scanCopy" class="hidden-file-input">
+                                    <button type="button" class="custom-file-browse-btn">Browse Files</button>
+                                    <span id="scanCopyFileName" class="file-name-display">No file chosen</span>
+                                </div>
+                            </div>
+
+                            <div class="form-field-row">
+                                <label for="maritalStatus">8.ආකෘතිය සමාන/අසමාන බව</label>
+                                <select  id="reason" name="reason">
+                                    <option value="None">None</option>
+                                    <option value="notsame">ආකෘතිය අසමාන විම</option>
+                                    <option value="notSign">ලේකම්ගේ අත්සන නොතිබීම</option>
+                                </select>   
+                            </div>
+                            
+                        </div>
+
+                        <div class="form-action-buttons">
+                            <a href="button1.html"><button class="action-btn save-btn">Save</button></a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header" data-target="committeeReportsSection">
+                    <span>කමිටුවට ඉදිරිපත් කරන වාර්තා සටහන්</span>
+                    <div class="header-icons">
+                        <i class="fas fa-print"></i>
+                        <i class="fas fa-file-pdf"></i>
+                        <i class="fas fa-times-circle"></i>
+                        <i class="fas fa-angle-down accordion-arrow"></i>
+                    </div>
+                </div>
+                <div class="accordion-content" id="committeeReportsSection">
+                    <form class="staff-info-form"> <div class="form-field-row">
+                            <label for="committeeReport_Ministry">අමාත්‍යාංශය</label>
+                            <input type="text" id="committeeReport_Ministry" placeholder="Placeholder">
+                        </div>
+                        <div class="form-field-row">
+                            <label for="committeeReport_Division">ආයතනය</label>
+                            <input type="text" id="committeeReport_Division" placeholder="Placeholder">
+                        </div>
+                        <div class="form-field-row">
+                            <label for="committeeReport_Subject">සටහන්</label>
+                            <input type="text" id="committeeReport_Subject" placeholder="Placeholder">
+                        </div>
+                        <div class="form-field-row">
+                            <label for="committeeReport_TotalApproved">සමස්ත අනුමත තනතුරු සංඛ්‍යාව</label>
+                            <input type="text" id="committeeReport_TotalApproved" placeholder="Placeholder">
+                        </div>
+                        <div class="form-field-row">
+                            <label for="committeeReport_TotalExisting">සමස්ත තත්‍ය තනතුරු සංඛ්‍යාව</label>
+                            <input type="text" id="committeeReport_TotalExisting" placeholder="Placeholder">
+                        </div>
+                        <div class="form-field-row">
+                            <label for="committeeReport_TotalApprovedBudget">සමස්ත පුරප්පාඩු තනතුරු සංඛ්‍යාව</label>
+                            <input type="text" id="committeeReport_TotalApprovedBudget" placeholder="Placeholder">
+                        </div>
+                    </form>
+
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>තනතුරු නාමය</th>
+                                    <th>අනුමත තනතුරු සංඛ්‍යාව</th>
+                                    <th>තත්‍ය තනතුරු සංඛ්‍යාව</th>
+                                    <th>පුරප්පාඩු</th>
+                                    <th>පසුගිය වසර 3 සිට පැවතී පුරප්පාඩු</th>
+                                    <th>අත්‍යවශ්‍ය තනතුරු සංඛ්‍යාව</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="text" value=""></td>
+                                    <td><input type="text" value=""></td>
+                                    <td><input type="text" value=""></td>
+                                    <td><input type="text" value=""></td>
+                                    <td><input type="text" value=""></td>
+                                    <td><input type="text" value=""></td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+
+                    
+
+                    <div class="form-action-buttons">
+                        <button type="button" class="action-btn edit-btn">Edit</button>
+                        <button type="button" class="action-btn save-btn">Save</button>
+                        <button type="button" class="action-btn print-btn">Print</button>
+                        <button type="button" class="action-btn add-btn">Add</button>
+                        <button type="button" class="action-btn add-btn">Delete</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header" data-target="dd">
+                    <div class="header-title">
+                        කමිටු සාකච්ජා 
+                    </div>
+                    <div class="header-icons">
+                        <i class="fas fa-print"></i>
+                        <i class="fas fa-file-pdf"></i>
+                        <i class="fas fa-download"></i>
+                        <i class="fas fa-caret-down accordion-arrow"></i>
+                    </div>
+                </div>   
+                <div class="accordion-content" id="dd">
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>අනු අංකය </th>
+                                    <th>අමාත්‍යාංශය/දෙපාර්තමේන්තුව / පළාත් සභා </th>
+                                    <th>පුරප්පාඩු සංඛ්‍යාව </th>
+                                    <th>බදවාගැනීම සදහා කමිටු එකගතාවය ලබාදුන් තනතුරු සංඛ්‍යාව</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="text" value=""></td>
+                                    <td><input type="text" value=""></td>   
+                                    <td><input type="text" value=""></td>
+                                    <td><input type="text" value=""></td>
+                                </tr>    
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <br><br><br>
+
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>දිනය</th>
+                                    <th>තනතුරු නාමය </th>
+                                    <th>පුරප්පාඩු සංඛ්‍යාව</th>
+                                    <th>අත්‍යවශ්‍යයෙන්ම බදවාගැනීමට අනුමැතිය අපේක්ෂා කරන සංඛ්‍යාව </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="text" value=""></td>
+                                    <td><input type="text" value=""></td>
+                                    <td><input type="text" value=""></td>   
+                                    <td><input type="text" value=""></td>
+                                </tr>    
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+                
+                
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <div class="header-title">
+                        අමාත්‍ය මණ්ඩල සංදේශ/ අතුරු වාර්තා
+                    </div>
+                    <div class="header-icons">
+                        <i class="fas fa-print"></i>
+                        <i class="fas fa-file-pdf"></i>
+                        <i class="fas fa-download"></i>
+                        <i class="fas fa-caret-down accordion-arrow"></i>
+                    </div>
+                </div>
+
+                <div class="accordion-content" id="dd">
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>දිනය</th>
+                                    <th>අමාත්‍ය මණ්ඩල සංදේශ </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="text" value=""></td>
+                                    <td><input type="text" value=""></td>   
+                                </tr>    
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <div class="header-title">
+                        අමාත්‍ය මණ්ඩල තීරණ 
+                    </div>
+                    <div class="header-icons">
+                        <i class="fas fa-print"></i>
+                        <i class="fas fa-file-pdf"></i>
+                        <i class="fas fa-download"></i>
+                        <i class="fas fa-caret-down accordion-arrow"></i>
+                    </div>
+                </div>
+
+                <div class="accordion-content" id="dd">
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>දිනය</th>
+                                    <th>අමාත්‍ය මණ්ඩල සංදේශ </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="text" value=""></td>
+                                    <td><input type="text" value=""><div class="file-input-display-wrapper">
+                                    <input type="file" id="scanCopy" class="hidden-file-input">
+                                    <button type="button" class="custom-file-browse-btn">Browse Files</button>
+                                    <span id="scanCopyFileName" class="file-name-display">No file chosen</span>
+                                </div></td>   
+                                </tr>    
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+            </div>
+
+        </div>
+     </div> 
+    
+
+    <script src="detail_script.js"></script>
+
+    <footer class="footer">
+        <p>© PM Office, Sri Lanka</p>
+    </footer>
+</body>
+</html>

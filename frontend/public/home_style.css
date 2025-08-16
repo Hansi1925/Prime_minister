@@ -1,0 +1,343 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+/* Header Styling  */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 70px;
+    box-sizing: border-box;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.header-emblem {
+    max-width: 70px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.header-text h1,
+.header-text h2,
+.header-text h3 {
+    margin: 0;
+    line-height: 1.2;
+}
+
+.header-text h1 {
+    font-size: 0.9em;
+}
+
+.header-text h2 {
+    font-size: 0.8em;
+}
+
+.header-text h3 {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.header-center {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 8px 12px;
+    background-color: #f8f8f8;
+    width: 300px;
+}
+
+.search-box i {
+    margin-right: 8px;
+    color: #888;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 0.9em;
+    background-color: transparent;
+}
+
+.header-right {
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.icon-placeholder {
+    width: 30px;
+    height: 30px;
+   
+    border-radius: 3px;
+}
+
+.main-content-container {
+    padding: 20px;
+}
+
+
+/* Main Navigation and Dropdown  */
+.main-nav {
+    background-color: #d47b33;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+    margin-top: 1px;
+}
+
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 10px;
+}
+
+.nav-item {
+    position: relative;
+    text-align: center;
+}
+
+.nav-link {
+    display: block;
+    font-size: 16px;
+    padding: 12px 15px;
+    text-decoration: none;
+    color: #fffdfd;
+    font-weight: bold;
+    white-space: nowrap;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #dcdcdc;
+    color: #333;
+}
+
+/* First Level Dropdown Menu Styling */
+.dropdown-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    min-width: 200px; 
+    z-index: 10;
+    display: none;
+    border-radius: 0 0 5px 5px;
+    text-align: left;
+}
+
+.dropdown-menu li a {
+    color: #333;
+    padding: 12px 15px;
+    text-decoration: none;
+    display: block;
+    white-space: nowrap;
+    position: relative; 
+}
+
+.dropdown-menu li a:hover {
+    background-color: #ddd;
+}
+
+/* Show first level dropdown on hover  */
+.nav-item.has-dropdown:hover > .dropdown-menu {
+    display: block;
+}
+
+/* Arrow styling for main dropdown */
+.nav-item .arrow {
+    font-size: 0.8em;
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+/* Rotate arrow when first level dropdown is active  */
+.nav-item.has-dropdown.active > .nav-link .arrow {
+    transform: rotate(180deg);
+}
+
+
+.has-sub-dropdown {
+    position: relative; 
+
+}
+
+.sub-dropdown-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0; 
+    left: 100%; 
+    background-color: #eee; 
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    min-width: 200px;
+    z-index: 20; 
+    display: none; 
+    border-radius: 0 5px 5px 5px;
+    text-align: left;
+}
+
+.sub-dropdown-menu li a {
+    color: #333;
+    padding: 12px 15px;
+    text-decoration: none;
+    display: block;
+    white-space: nowrap;
+}
+
+.sub-dropdown-menu li a:hover {
+    background-color: #e0e0e0;
+}
+
+/* Show second level dropdown on hover (for desktop) */
+.has-sub-dropdown:hover > .sub-dropdown-menu {
+    display: block;
+}
+
+/* Styling for sub-dropdown arrow */
+.sub-arrow {
+    font-size: 0.7em;
+    margin-left: 5px;
+    color: #888;
+    position: absolute;
+    right: 10px; 
+    top: 50%;
+    transform: translateY(-50%) rotate(0deg); 
+    transition: transform 0.3s ease;
+}
+
+/* Rotate sub-arrow when sub-dropdown is active (via JavaScript) */
+.has-sub-dropdown.active > a .sub-arrow {
+    transform: translateY(-50%) rotate(90deg); 
+}
+
+/* Data Card List  */
+.data-card-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.data-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-width: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    color: #555;
+    font-size: 0.95em;
+    border: 1px solid rgb(255, 150, 112);
+}
+
+.footer {
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9em;
+    flex-shrink: 0; 
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    /* Header adjustments (unchanged) */
+    .header-container { flex-wrap: wrap; height: auto; justify-content: center; text-align: center; }
+    .header-left, .header-center, .header-right { margin-bottom: 10px; }
+    .header-center { order: 3; width: 100%; }
+    .search-box { width: 80%; }
+
+    /* Main nav adjustments  */
+    .nav-list { flex-direction: column; align-items: stretch; }
+    .nav-item { width: 100%; border-bottom: 1px solid #dcdcdc; }
+    .nav-item:last-child { border-bottom: none; }
+
+    /* Dropdown menu (first level) adjustments for mobile */
+    .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        border-radius: 0;
+        min-width: unset;
+        background-color: #e8e8e8; 
+    }
+    /* Hide dropdowns for mobile initially, reveal with JS toggle */
+    .nav-item.has-dropdown > .dropdown-menu {
+        display: none;
+    }
+    /* Show dropdown when active class is added by JS */
+    .nav-item.has-dropdown.active > .dropdown-menu {
+        display: block;
+    }
+
+    /* Sub-dropdown menu (second level) adjustments for mobile */
+    .sub-dropdown-menu {
+        position: static; 
+        box-shadow: none;
+        border-radius: 0;
+        min-width: unset;
+        background-color: #f0f0f0; 
+        padding-left: 20px;
+    }
+    /* Hide sub-dropdowns for mobile initially, reveal with JS toggle */
+    .has-sub-dropdown > .sub-dropdown-menu {
+        display: none;
+    }
+    /* Show sub-dropdown when active class is added by JS */
+    .has-sub-dropdown.active > .sub-dropdown-menu {
+        display: block;
+    }
+
+    /* Rotate sub-arrow for mobile on click */
+    .has-sub-dropdown.active > a .sub-arrow {
+        transform: translateY(-50%) rotate(90deg);
+    }
+    /* Reset main arrow for mobile (as it's managed by JS active class) */
+    .nav-item .arrow {
+        transform: rotate(0deg);
+    }
+}
+
+@media (max-width: 600px) {
+    .header-container {
+        padding: 10px;
+    }
+    .header-right {
+        justify-content: center;
+        width: 100%;
+        margin-top: 10px;
+    }
+}
