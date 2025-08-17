@@ -1,0 +1,15 @@
+# Backend node modules
+node_modules/
+
+# Database file
+var/data.sqlite
+
+# Environment
+.env
+
+# Build or temp folders (if any)
+dist/
+coverage/
+# Logs
+logs/
+*.log
